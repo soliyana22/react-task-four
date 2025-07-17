@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.footer-wrapper{
+    position: fixed;
+    align-items: flex-end;
+    width:100%;  
+    height: 1000px;
+    opacity: 1;
+    left:0;
+}
+.footer-container
+{
+ display:flex;
+ 
+ background-color: black;
+ color:white;
+ line-height: 2;
+
+}
+.footer-column{
+    flex-direction: column;
+    flex:1;
+}
+
+.email {
+  position: relative; /* make this a positioning context */
+  width: 217px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1.5px solid #444;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the input */
+.email input {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 16px; /* left padding + extra right padding for icon */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FAFAFA;
+  font-size: 14px;
+}
+
+/* Position the icon inside */
+.email-icon {
+  position: absolute;
+  right: 12px;  
+  top: 50%;      
+  transform: translateY(-50%);
+  color: #FAFAFA;
+  cursor: pointer; 
+}
+.download-method {
+  display: flex;
+  align-items: center; /* vertically center */
+  gap: 16px; /* space between QR and buttons */
+}
+
+.qr {
+  width: 120px; /* adjust size */
+  height: auto;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 8px; /* space between the two buttons */
+}
+
+.store-buttons img {
+  width: 150px; /* adjust as needed */
+  height: auto;
+  cursor: pointer;
+}
