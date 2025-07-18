@@ -1,5 +1,7 @@
 import React from 'react'
-import { FiSend } from "react-icons/fi";
+import { FiSend, } from "react-icons/fi";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+
 import './Footer.css'
 const Footer = () => {
   return (
@@ -21,6 +23,7 @@ const Footer = () => {
             <p>+88015-88888-9999</p>
             </div>
         <div className='footer-column'>
+            <p>Account</p>
             <p>My Account</p>
             <p>Login / Register</p>
             <p>Cart</p>
@@ -37,14 +40,24 @@ const Footer = () => {
             <p>Download App</p>
             <p>Save $3 with App New User Only</p>
             <div className="download-method">
-            <img className="qr" src="../../assets/images/QR_code.jpg" alt="QR Code" />
+            <img className="qr" src="./../assets/images/QR_code.jpg" alt="QR Code" />
             <div className="store-buttons">
-                <img src="../../assets/images/Google_play.png" alt="Google Play" />
-                <img src="../../assets/images/App_store.png" alt="App Store" />
+                <img src="./../assets/images/Google_play.png" alt="Google Play" />
+                <img src="./../assets/images/App_store.png" alt="App Store" />
             </div>
+            </div>
+            <div className="social-icons">
+            <Facebook size={24} className="icon" />
+            <Twitter size={24} className="icon" />
+            <Instagram size={24} className="icon" />
+            <Linkedin size={24} className="icon" />
             </div>
 
+
         </div>
+    </div>
+    <div className='copy-right'>
+        <p>© Copyright Rimel 2022. All right reserved</p>
     </div>
  </div>
   )

@@ -8,17 +8,17 @@
     position: fixed;
     align-items: flex-end;
     width:100%;  
-    height: 1000px;
+    height: auto;
+    min-height: 1100px;
     opacity: 1;
     left:0;
+    background-color: black;
+    color:white;
 }
 .footer-container
 {
  display:flex;
- 
- background-color: black;
- color:white;
- line-height: 2;
+ line-height: 2.25;
 
 }
 .footer-column{
@@ -65,18 +65,35 @@
 }
 
 .qr {
-  width: 120px; /* adjust size */
-  height: auto;
+  width: 80px;
+  height: 80px;
+
 }
 
 .store-buttons {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 8px; /* space between the two buttons */
+  flex-direction: column;
+   gap: 0; /* stack vertically */
+   /* space between the two buttons */
 }
 
 .store-buttons img {
-  width: 150px; /* adjust as needed */
+  display: block;
+  width: 150px;
   height: auto;
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  object-fit: contain; /* avoid extra scaling issues */
 }
+.store-buttons img + img {
+  margin-top: -100px; /* pull the second image up */
+}
+.social-icons{
+  display:flex;
+  gap:40px;
+}
+.copy-right{
+  color: white;
+  opacity:0.5;
+}
+

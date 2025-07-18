@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+.signup-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    
+}
+.signup-content{
+    display:flex;
+    justify-content: space-between;
+}
+.image_content{
+    display:flex;
+    flex:2;
+    left:0;
+    justify-content: flex-start;
+    margin-left:-150px;
+    
+
+}
+.image_content img{
+    width: 919px;
+height: 706px;
+
+opacity: 1;
+top: 75px;
+left: -8px;
+
+}
+.text-content{
+    
+    justify-content: center;
+    
+   margin-top:10rem;
+}
+.text-box{
+   display: flex;
+    flex-direction: column;
+    flex:1;
+    margin-left: 5rem;
+     
+}
+.input-box{
+    width:370px;
+    padding:20px;
+    border:transparent;
+    border-bottom: 1px solid black;
+    position:relative;
+    gap:40px;
+}
+.signup-google{
+    display: flex;
+}
