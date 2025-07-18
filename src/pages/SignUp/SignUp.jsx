@@ -17,10 +17,10 @@ const SignUp = () => {
           <button>
             Create Account
           </button>
-          <div className='signup-google'>
+          {/* <div className='signup-google'>
            <p>Sign Up with Google</p>
-           
-          </div>
+          
+          </div> */}
           </div>
         </div>
       </div>
