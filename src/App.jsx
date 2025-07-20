@@ -22,10 +22,10 @@ function App() {
       <Header/>
       <Navigation_list/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<SignUp />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<LogIn/>}/>
       </Routes>
       <Footer/>
