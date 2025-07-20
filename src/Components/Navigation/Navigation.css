@@ -51,6 +51,7 @@
     border:1px transparent;
     background-color: #F5F5F5;
     width:200px;
+    color:black;
 }
 .icons{
     display: flex;      /* enables gap */
