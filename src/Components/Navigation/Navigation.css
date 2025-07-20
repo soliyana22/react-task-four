@@ -5,7 +5,7 @@
     font-family: poppins;
 }
 .Navigation-container {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 10%;
@@ -25,11 +25,12 @@
 .navigation-lists{
     display:flex;
     flex-direction: row;
-    gap:48px;
+    gap:40px;
 }
 .navigation-page{
     color:black;
     font-weight: 400;
+    text-decoration: none;
 }
 .input_type{
     display:flex;

@@ -1,6 +1,6 @@
 import AuthForm from "./../../Components/AuthForm/AuthForm.jsx";
 import './../SignUp/SignUp.css'
-export const LogIn = () => {
+ const LogIn = () => {
   return <AuthForm mode="login" />;
 };
-
+export default LogIn;

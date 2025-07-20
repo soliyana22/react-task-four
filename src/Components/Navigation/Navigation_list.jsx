@@ -11,10 +11,12 @@ const Navigation_list = () => {
       </div>
       <div className='navigation'>
         <nav className='navigation-lists'>
+        
             <Link  to="/" className='navigation-page'>Home</Link>
             <Link  to="/contact" className='navigation-page'>Contact</Link>
             <Link  to="/about" className='navigation-page'>About</Link>
             <Link  to="/signup" className='navigation-page'>Sign Up</Link>
+          
         </nav>
       </div>
       <div className='input_type'>
