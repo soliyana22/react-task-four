@@ -249,11 +249,8 @@
 .main{
 }
 .third-section{
-    display:flex;
     background-color: white;
     height:auto;
-    flex:1;
-    flex-direction: column;
     gap:20px;
    
 }
@@ -272,6 +269,7 @@
     opacity: 1;
     border-radius: 4px;
     border:none;
+  
     
 }
 
@@ -378,7 +376,6 @@ color:white;
 }
 .stars{
     display: flex;
-    position: relative;
     gap:5px;
 }
 .sale-product-lower{
@@ -467,11 +464,10 @@ color:white;
     position: absolute;
 }
 .best-selling-main{
-    position: absolute;
-    width: 1308px;
-    height: 493px;
-    top: 290px;
-    left: 15px;
+    display: flex;
+    width: 100%;
+    
+    
   
 }
 .flash-sale-view{
@@ -494,9 +490,7 @@ color:white;
     background-color: black;
     color:white;
     width: 100%;
-    height: 500px;
-    margin-top: 140rem;
-    margin-left: -40rem;
+    max-height: 500px;
     justify-content: center;
     align-items: center;
 
@@ -510,17 +504,28 @@ color:white;
     align-items:flex-start;
     margin-left:2.5rem;
 }
-.enhace-image{
+/* .enhace-image{
     flex:1;
-   
+   background-color: (to right, #000000, #808080);
 
 }
 .enhace-image img{
     width:100%;
     padding:20px;
-/* transform: rotate(360deg); */
+    background-color: (to right, #000000, #808080);
 
 
+
+} */
+ .enhace-image {
+    flex: 1;
+    
+}
+
+.enhace-image img {
+    width: 100%;
+    
+    
 }
 .rounded-divs{
     display: flex;
@@ -581,6 +586,9 @@ color:white;
 }
 .enhace-button-main{
     margin:15px auto;
+}
+.sixth-section{
+    margin:3rem auto;
 }
 /* .sale-product-section-last{
      width:100%;
