@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Home.css'
 import { FiEye } from "react-icons/fi";
-import { FaApple,FaArrowLeft,FaArrowRight, FaEye,FaHeart,FaStar,FaRegHeart, FaRegEye} from "react-icons/fa";
-import { ChevronRight,Smartphone,Monitor,Watch,  } from 'lucide-react';
+import { FaApple,FaArrowLeft,FaArrowRight,FaStar,FaRegHeart,FaCamera,FaHeadphones,FaGamepad} from "react-icons/fa";
+import { ChevronRight,Smartphone,Monitor,Watch } from 'lucide-react';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -317,7 +317,7 @@ const Home = () => {
                     <FaRegHeart  className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FiEye   className="icon-outline" style={{color:"black"}}/>
+                    <FiEye className="icon-outline" style={{color:"black"}}/>
                   </div>
                 </div>
               </div>
@@ -352,7 +352,8 @@ const Home = () => {
          
           
     {/* fourth section */}
-             {/* <section className='fout'>
+      <section className='fourth-section'>
+        <div className='fourth-section-main'>
         <div className='browse-by-category'>
         
           <div className='headline-icon'>
@@ -417,7 +418,8 @@ const Home = () => {
               </div>
               <div className='category-text'>Phone</div>
             </div>
-            </div><div className='category-container'>
+            </div>
+            <div className='category-container'>
             <div className='category'>
               <div className='category-icon'>
                 <FaGamepad className='each-icon'/>
@@ -425,7 +427,9 @@ const Home = () => {
               <div className='category-text'>Phone</div>
             </div>
             </div>
-      <section className='best-selling-main'>
+            </div>
+            
+      {/* <div className='best-selling-main'>
         <div className='best-selling'>
         
           <div className='headline-icon'>
@@ -446,9 +450,11 @@ const Home = () => {
               </div>
               </div>
               </div>
-              </section>
-            </div>
-        <section className='best-selling-section'>
+           </div>  */}
+       </div>
+        </section>
+            
+        {/* <div className='best-selling-section'>
         <div className="sale-product-section">
           <div className="sale-product">
             <div className="sale-product-main">
@@ -456,10 +462,10 @@ const Home = () => {
                 
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye className="icon-outline" />
                   </div>
                 </div>
         
@@ -495,10 +501,10 @@ const Home = () => {
               
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye className="icon-outline" />
                   </div>
                 </div>
               </div>
@@ -530,10 +536,10 @@ const Home = () => {
                 
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye className="icon-outline" />
                   </div>
                 </div>
               </div>
@@ -564,10 +570,10 @@ const Home = () => {
                
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye className="icon-outline" />
                   </div>
                 </div>
               </div>
@@ -594,9 +600,14 @@ const Home = () => {
               </div>
           
          </div>
-         </section>  
-            </section>
-            <div className='enhance-container'>
+        
+       </div>   
+       </section>    
+           
+
+       {/* fourth section */}
+       
+            {/* <div className='enhance-container'>
               <div className='enhace-text'>
                 <></>
                 <p className='enhance-category'>Categories</p>
@@ -625,10 +636,10 @@ const Home = () => {
               </div>
               <div className='enhace-image'>
                 <img src="./../assets/images/enhance-speaker.png"></img>
-              </div>
-            </div> */}
+              </div> */}
+            </div> 
             
-            </div>
+           
        
  
 

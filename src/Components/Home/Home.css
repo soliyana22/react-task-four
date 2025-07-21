@@ -305,7 +305,6 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,6 +313,8 @@
 .icon-outline {
   font-size: 24px;
   color: #000;
+
+
  
   
  
@@ -334,6 +335,24 @@ color:white;
 }
 .sale-product-lower{
     display:block;
+}
+.fourth-section{
+
+   
+    margin:20px auto;
+
+}
+.fourth-section-main{
+    display:flex;
+    gap:30px;
+    flex-direction: column;
+    align-items: space-between;
+
+}
+.browse-by-category{
+    flex:1;
+    gap:20px;
+
 }
 .product-name{
     color:black;
@@ -576,3 +595,301 @@ color:white;
     display:flex;
     margin-top: 160rem;
 } */
+ @media (max-width: 768px) {
+    .home-container {
+        padding: 0 1rem;
+    }
+
+    /* First Section */
+    .first-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-container {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        padding-bottom: 1rem;
+    }
+
+    .nav-text {
+        margin: auto 20px;
+    }
+
+    .image-container {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .image-container-main {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .image-container-text {
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        gap: 0.75rem;
+    }
+
+    .discount-text {
+        font-size: 2rem;
+    }
+
+    .iphone-text {
+        font-size: 1.2rem;
+    }
+
+    .shop-text {
+        font-size: 1rem;
+    }
+
+    .home_mobile {
+        width: 100%;
+        max-height: 200px;
+        height: auto;
+    }
+
+    .ellipses {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    /* Third Section */
+    .third-section {
+        gap: 1rem;
+    }
+
+    .flash-sale-heading {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .flash-sale-title {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .flash-sale-date {
+        gap: 1rem;
+    }
+
+    .calendar-colon {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    .calendar {
+        font-size: 0.75rem;
+    }
+
+    .sale-product-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .sale-product-main {
+        padding: 0.5rem;
+    }
+
+    .product-image {
+        width: 100%;
+        max-height: 150px;
+        margin-bottom: 2rem;
+        margin-top: -1rem;
+    }
+
+    .dis-btn {
+        width: 45px;
+        height: 22px;
+        font-size: 0.8rem;
+        left: 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-outline {
+        font-size: 1rem;
+    }
+
+    .sale-product-lower {
+        padding: 0.5rem;
+    }
+
+    .view-all-products {
+        max-width: 180px;
+        height: 48px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .line {
+        margin-top: 2rem;
+    }
+
+    /* Fourth Section */
+    .fourth-section {
+        margin: 2rem auto;
+    }
+
+    .fourth-section-main {
+        gap: 1rem;
+    }
+
+    .category-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    .category {
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+        padding: 1rem;
+    }
+
+    .each-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .category-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Mobile (≤480px) */
+@media (max-width: 480px) {
+    .home-container {
+        padding: 0 0.5rem;
+    }
+
+    /* First Section */
+    .nav-text p {
+        font-size: 0.9rem;
+    }
+
+    .nav-text {
+        margin: auto 10px;
+    }
+
+    .discount-text {
+        font-size: 1.5rem;
+    }
+
+    .iphone-text {
+        font-size: 1rem;
+    }
+
+    .shop-text {
+        font-size: 0.9rem;
+    }
+
+    .home_mobile {
+        max-height: 150px;
+    }
+
+    .ellipses {
+        gap: 0.3rem;
+    }
+
+    .ellipse-each {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Third Section */
+    .flash-sale-title {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    .calendar {
+        font-size: 0.65rem;
+    }
+
+    .calendar-colon {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .sale-product-section {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .product-image {
+        max-height: 120px;
+    }
+
+    .product-name {
+        font-size: 0.9rem;
+    }
+
+    .current, .previous {
+        font-size: 0.9rem;
+    }
+
+    .stars {
+        gap: 0.2rem;
+    }
+
+    .stars svg {
+        font-size: 1rem;
+    }
+
+    .dis-btn {
+        width: 40px;
+        height: 20px;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .icon-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon-outline {
+        font-size: 0.9rem;
+    }
+
+    .view-all-products {
+        max-width: 150px;
+        height: 40px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    /* Fourth Section */
+    .category-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .category {
+        max-width: 100px;
+        height: 100px;
+        padding: 0.5rem;
+    }
+
+    .each-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category-text {
+        font-size: 0.8rem;
+    }
+}
