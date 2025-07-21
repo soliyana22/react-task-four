@@ -274,40 +274,7 @@ const Home = () => {
               </div>
             </div>
             </div>
-          <div className="sale-product">
-            <div className="sale-product-main">
-              <div className="sale-product-btn">
-                <div className='dis-btn'>-25%</div>
-                <div className="sale-product-icon">
-                  <div className="icon-circle">
-                    <FaRegHeart  className="icon-outline" />
-                  </div>
-                  <div className="icon-circle">
-                    <FiEye  className="icon-outline" />
-                  </div>
-                </div>
-              </div>
-              <div className='sale-product-image'>
-                <img src="./../assets/images/chair.png" className='product-image'/>
-              </div>
-              </div>
-              <div className='sale-product-lower'>
-              <p className='product-name'>S-Series Comfort Chair </p>
-              <div className='price'>
-                <p className='current'>$375</p>
-                <p className='previous'>$400</p>
-              </div>
-              <div className='stars'>
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
-                <p style={{color:"gray",width:"24px",height:"24px",fontWeight:"600",fontSize:"14px"}}>(88)</p>
-              </div>
-            </div>
-              </div>
+  
               <div className="sale-product">
             <div className="sale-product-main">
               <div className="sale-product-btn">
@@ -459,8 +426,10 @@ const Home = () => {
     <div className="sale-product">
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
+              
               <FaRegHeart className="icon-outline" />
             </div>
             <div className="icon-circle">
@@ -493,8 +462,10 @@ const Home = () => {
     <div className='sale-product'>
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
+              
               <FaRegHeart className="icon-outline" />
             </div>
             <div className="icon-circle">
@@ -527,6 +498,7 @@ const Home = () => {
     <div className='sale-product'>
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -561,6 +533,7 @@ const Home = () => {
     <div className="sale-product">
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -659,6 +632,7 @@ const Home = () => {
     <div className="sale-product">
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -692,6 +666,7 @@ const Home = () => {
     <div className='sale-product'>
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -725,6 +700,7 @@ const Home = () => {
     <div className='sale-product'>
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -759,6 +735,7 @@ const Home = () => {
     <div className="sale-product">
       <div className="sale-product-main">
         <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
           <div className="sale-product-icon">
             <div className="icon-circle">
               <FaRegHeart className="icon-outline" />
@@ -787,6 +764,138 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
+    
+     
+    <div className="sale-product">
+      <div className="sale-product-main">
+        <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
+          <div className="sale-product-icon">
+            <div className="icon-circle">
+              <FaRegHeart className="icon-outline" />
+            </div>
+            <div className="icon-circle">
+              <FiEye className="icon-outline" />
+            </div>
+          </div>
+        </div>
+        <div className='sale-product-image'>
+          <img src="./../assets/images/car.png" className='product-image' />
+        </div>
+      </div>
+      <div className='sale-product-lower'>
+        <p className='product-name'>Kids Electric Car</p>
+        <div className='price'>
+          <p className='current'>$960</p>
+        </div>
+        <div className='stars'>
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+      
+          <p style={{ color: "gray", fontWeight: "600", fontSize: "14px" }}>(65)</p>
+        </div>
+      </div>
+    </div>
+    <div className="sale-product">
+      <div className="sale-product-main">
+        <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
+          <div className="sale-product-icon">
+            <div className="icon-circle">
+              <FaRegHeart className="icon-outline" />
+            </div>
+            <div className="icon-circle">
+              <FiEye className="icon-outline" />
+            </div>
+          </div>
+        </div>
+        <div className='sale-product-image'>
+          <img src="./../assets/images/sport_shoes.png" className='product-image' />
+        </div>
+      </div>
+      <div className='sale-product-lower'>
+        <p className='product-name'>Jr. Zoom Soccer Cleats </p>
+        <div className='price'>
+          <p className='current'>$1160</p>
+        </div>
+        <div className='stars'>
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+      
+          <p style={{ color: "gray", fontWeight: "600", fontSize: "14px" }}>(35)</p>
+        </div>
+      </div>
+    </div>
+    <div className="sale-product">
+      <div className="sale-product-main">
+        <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
+          <div className="sale-product-icon">
+            <div className="icon-circle">
+              <FaRegHeart className="icon-outline" />
+            </div>
+            <div className="icon-circle">
+              <FiEye className="icon-outline" />
+            </div>
+          </div>
+        </div>
+        <div className='sale-product-image'>
+          <img src="./../assets/images/black_gamepad.png" className='product-image' />
+        </div>
+      </div>
+      <div className='sale-product-lower'>
+        <p className='product-name'>GP11 Shooter USB Gamepad </p>
+        <div className='price'>
+          <p className='current'>$660</p>
+        </div>
+        <div className='stars'>
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+      
+          <p style={{ color: "gray", fontWeight: "600", fontSize: "14px" }}>(55)</p>
+        </div>
+      </div>
+    </div>
+    <div className="sale-product">
+      <div className="sale-product-main">
+        <div className="sale-product-btn">
+          <div className='dis-btn-main'></div>
+          <div className="sale-product-icon">
+            <div className="icon-circle">
+              <FaRegHeart className="icon-outline" />
+            </div>
+            <div className="icon-circle">
+              <FiEye className="icon-outline" />
+            </div>
+          </div>
+        </div>
+        <div className='sale-product-image'>
+          <img src="./../assets/images/women_jacket.png" className='product-image' />
+        </div>
+      </div>
+      <div className='sale-product-lower'>
+        <p className='product-name'>Quilted Satin Jacket </p>
+        <div className='price'>
+          <p className='current'>$660</p>
+        </div>
+        <div className='stars'>
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+          <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+      
+          <p style={{ color: "gray", fontWeight: "600", fontSize: "14px" }}>(55)</p>
+        </div>
+      </div>
+    </div>
+    
   </div>
 
   <div className='view-all-products'>
