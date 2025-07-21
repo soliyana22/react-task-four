@@ -558,6 +558,7 @@ const Home = () => {
             </section>
             <div className='enhance-container'>
               <div className='enhace-text'>
+                <></>
                 <p className='enhance-category'>Categories</p>
                 <p className='enhance-main-text'>Enhance Your Music Experience</p>
                 <div className='rounded-divs'>
@@ -577,6 +578,9 @@ const Home = () => {
                     <p className='rounded-number'>35</p>
                     <p className='rounded-time'>Seconds</p>
                   </div>
+                </div>
+                <div className='enhance-button'>
+                  <div className='enhace-button-main'>Buy now</div>
                 </div>
               </div>
               <div className='enhace-image'>
