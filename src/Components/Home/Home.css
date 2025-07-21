@@ -5,111 +5,141 @@
     font-family: 'Poppins', sans-serif;
 }
 .home-container{
-    display:flex;
+    
     height:auto;
-    min-height: 900px;
+    /* min-height: 1000px; */
+}
+.first-section{
+    display: flex;
 }
 .nav-container{
-    position: absolute;
     flex:1;
     border-right:1px solid black;
-    width: 217px;
-    height: 344px;
-    top: 130px;
-    left: 135px;
     gap: 16px;
-
-}
-.image-container{
-    position:relative;
-    flex:17;
-    width: 100%;
-    height: 344px;
-    top: 130px;
-    left: 280px;
-    margin-right:200px;
-    background-color: black;
-    /* background-color: black; */
-}
-.image-container-main{
-    
-    width: 400px;
-    height: 200px;
-    top: 16px;
-    left: 396px;
-
+    flex-direction:column;
     
 
 }
-
-.icon-iphone{
-    position: absolute;
+.nav-list{
+    justify-content: center;
+     margin:auto 10px;
+}
+.nav-each{
     display:flex;
-    width: 190px;
-    height: 49px;
-    top: 58px;
-    left: 64px;
-    gap: 24px;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.nav-text {
+    justify-content: center;
+    font-weight: 400;
+    margin:auto 40px;
+   
+   
+}
+
+.nav-text p{
+    text-align: justify;
+}
+.icon-iphone{
+   
+    display:flex;
+    gap: 10px;
+    justify-content: flex-start;
 }
 .iphone-text{
+    
     color:white;
     font-size: 16px;
     font-weight: 400;
+    
 }
+
+.image-container{
+    flex:2;
+    width: 100%;
+    height:auto;
+    padding:30px;
+    background-color: black;
+    margin:10px;
+    justify-content: space-between;
+    /* background-color: black; */
+}
+.image-container-main{
+    display: flex;
+    justify-content: space-between;
+
+}
+.image-container-text{
+    display: flex;
+    flex:3;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+    min-height:300px;
+    align-items: center;
+    gap:10px;
+    margin-top:20px;
+    
+   
+
+    
+
+}
+
+.image-main{
+    flex:3;
+   
+}
+.image-iphone{
+    background-color: black;
+ 
+}
+
+
 .discount-container{
-    position: absolute;
-    width: 294px;
-    height: 120px;
-    top: 127px;
-    left: 64px;
+    justify-content: flex-start;
 
 }
 .discount-text{
     font-weight: 600;
     font-size:48px;
     color:white;
+    text-align:justify;
 }
 .shop-now{
-    position: absolute;
+    
     display:flex;
-    width: 120px;
-    height: 28px;
-    top: 269px;
-    left: 67px;
-    gap: 8px;
+    justify-content: flex-start;
 }
 .shop-text{
     font-weight: 500;
     font-style: Medium;
     font-size: 17px;
-    
     line-height: 24px;
     letter-spacing: 0%;
     text-align: center;
     color:white;
     text-decoration: underline;
+    
 
     }
 .home_mobile{
-    position: absolute;
+   
     width: 356px;
     height: 300px;
-    top: 5px;
-    left: 476px;
+    
 
 }
-.image-iphone{
-    background-color: black;
-    margin-right:6rem;
-}
+
 .ellipses{
-    position: relative;
     display:flex;
     width: 110px;
     height: 14px;
-    top: 319px;
-    left: 353px;
     gap: 12px;
+    flex:1;
+   
+    margin-top: auto;
+   
 
 }
 .ellipse-each{
@@ -118,40 +148,30 @@
     border-radius: 50%;
     border:none;
     background-color:white
+
 }
 .ellipse-each.active {
   background-color: #DB4444;
   border:2px solid white;
 }
-.nav-each{
-    display:flex;
-    justify-content: space-between;
-    line-height: 40px;
-}
-.nav-text{
-    font-weight: 400;
-   
-}
+
 .flash-sales-container{
-    position: absolute;
-    width: 1308px;
-    height: 493px;
-    top: 666px;
-    left: 135px;
-    gap: 40px;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    
 
 }
-.flash-sale-today{
+/* .flash-sale-today{
     width: 100px;
     height: 40px;
     display:flex;
 
 
-}
+} */
 .headline-icon{
     display: flex;
-    width: 100px;
-    height: 40px;
+    width:100%;
     gap: 16px;
 
 } .today-icon{
@@ -177,20 +197,23 @@
     line-height: 48px;
     letter-spacing: 4%;
     color: #000000;
-} .flash-sale-date{
+} 
+.flash-sale-date{
     display:flex;
-    position:initial;
     gap:40px;
 
 } 
 .flash-sale-date-title {
+    display: flex;
+    flex-direction: column;
     position:initial;
-    gap:40px;
+    gap:5px;
 
 }
 .flash-sale-icon{
-display: flex;
-margin-right:8rem;
+  display: flex;
+  gap:5px;
+
 } 
 .flash-sale-bg{
      border-radius: 50%;
@@ -225,47 +248,37 @@ margin-right:8rem;
 }
 .main{
 }
-.sale-product{
+.third-section{
     display:flex;
-    margin-top: 800px;
     background-color: white;
-    height:350px;
-    min-height: 50px;
+    height:auto;
     flex:1;
     flex-direction: column;
+    gap:20px;
    
 }
+.sale-product-section{
+    display: flex;
+    width: 100%;
+    height:auto;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
+}
 .sale-product-main{
-    position: relative;
     flex:1;
     background-color: #F5F5F5;
     gap:10x;
-    width: 270px;
-    height: 290px;
-   
     opacity: 1;
     border-radius: 4px;
-
     border:none;
     
 }
-.sale-product-section{
-    position: absolute;
-    width: 1308px;
-    height: 350px;
-    top: 20px;
-    left: 135px;
-    gap: 40px;
-    width: 100%;
-    justify-content: center;
-    display:flex;
-    
-    
 
-}
 .sale-product-btn{
     display:flex;
     justify-content: space-between;
+   
    
 }
 .sale-product-icon {
@@ -301,8 +314,8 @@ margin-right:8rem;
 .icon-outline {
   font-size: 24px;
   color: #000;
-  stroke:black;
-  fill:white;
+ 
+  
  
 }
 .dis-btn{
@@ -364,12 +377,8 @@ color:white;
     margin-top: -5rem;
 }
 .view-all-products{
-    position: absolute;
     width: 234px;
     height: 56px;
-    top: 1219px;
-    left: 603px;
-    gap: 10px;
     border-radius: 4px;
     padding-top: 16px;
     padding-right: 48px;
@@ -377,6 +386,16 @@ color:white;
     padding-left: 48px;
     color:white;
     background-color: #DB4444;
+    margin:25px auto;
+
+}
+.line{
+    width: 100%;
+    height: 0.9px;
+    margin-top:5rem;
+    border-width: 0.5px;
+    background-color: black;
+    opacity:0.3;
 
 }
 .discount-sale-product{
@@ -457,7 +476,7 @@ color:white;
     color:white;
     width: 100%;
     height: 500px;
-    margin-top: 150rem;
+    margin-top: 140rem;
     margin-left: -40rem;
     justify-content: center;
     align-items: center;
@@ -478,8 +497,8 @@ color:white;
 
 }
 .enhace-image img{
-width: 608px;
-height: 700px;
+    width:100%;
+    padding:20px;
 /* transform: rotate(360deg); */
 
 
@@ -527,7 +546,7 @@ height: 700px;
     font-size: 48px;
     line-height: 60px;
     letter-spacing: 4%;
-  
+    line-height:60px;
     text-align: justify;
    
 
@@ -544,3 +563,16 @@ height: 700px;
 .enhace-button-main{
     margin:15px auto;
 }
+/* .sale-product-section-last{
+     width:100%;
+    max-width: 1308px;
+    height:auto;
+    max-height: 350px;
+    justify-content: center;
+    algi
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    display:flex;
+    margin-top: 160rem;
+} */

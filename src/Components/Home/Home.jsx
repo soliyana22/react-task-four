@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './Home.css'
-import { FaApple,FaArrowLeft,FaArrowRight, FaEye,FaHeart,FaStar,FaCamera,FaHeadphones,FaGamepad} from "react-icons/fa";
+import { FiEye } from "react-icons/fi";
+import { FaApple,FaArrowLeft,FaArrowRight, FaEye,FaHeart,FaStar,FaRegHeart, FaRegEye} from "react-icons/fa";
 import { ChevronRight,Smartphone,Monitor,Watch,  } from 'lucide-react';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   return (
     <div className='home-container'>
+      <section className='first-section'>
       <div className='nav-container'>
         <div className='nav-lists'>
             <div className='nav-each'>
@@ -70,8 +72,13 @@ const Home = () => {
 
         </div>
       </div>
+    
+
+
+{/*second-section  */}
       <div className='image-container'>
-        <div className='image-container-main'>
+        <div className='image-container-main'> 
+        <div className='image-container-text'>
           <div className='icon-iphone'>
             <FaApple size={40} style={{color:"white"}}/>
             <p className='iphone-text'>iPhone 14 Series</p>
@@ -83,10 +90,8 @@ const Home = () => {
             <p className='shop-text'>Shop now</p>
             <FaArrowRight size={24} style={{color:"white"}}/>
           </div>
-        <div className='image-iphone'>
-        <img src="./../assets/images/home_mobile.jpg" className='home_mobile'/>
         </div>
-        <div className="ellipses">
+         <div className="ellipses">
       {[0, 1, 2, 3, 4].map((_, index) => (
         <div
           key={index}
@@ -95,9 +100,18 @@ const Home = () => {
         ></div>
       ))}
     </div>
-        </div>
+        
+        <div className='image-main'>
+        <div className='image-iphone'>
+        <img src="./../assets/images/home_mobile.jpg" className='home_mobile'/>
+        </div> 
       </div>
-      <section className='sale-product main'>
+      </div>
+    </div>
+</section>
+      {/* third section*/}
+    
+  <section className='third-section'>
       <div className='flash-sales-container'>
         
           <div className='headline-icon'>
@@ -159,10 +173,10 @@ const Home = () => {
                 <div className='dis-btn'>-40%</div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye className="icon-outline" />
                   </div>
                 </div>
         
@@ -195,28 +209,25 @@ const Home = () => {
             <div className='sale-product'>
             <div className="sale-product-main">
               <div className="sale-product-btn">
-                <div className='dis-btn'>-40%</div>
+                <div className='dis-btn'>-35%</div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye  className="icon-outline" />
                   </div>
                 </div>
               </div>
               <div className='sale-product-image'>
                 <img src="./../assets/images/keyboard.png" className='product-image'/>
               </div>
-              <div className='add-to-cart'>
-                Add to cart
-              </div>
             </div>
             <div className='sale-product-lower'>
-              <p className='product-name'>HAVIT HV-G92 Gamepad</p>
+              <p className='product-name'>AK-900 Wired Keyboard</p>
               <div className='price'>
-                <p className='current'>$120</p>
-                <p className='previous'>$160</p>
+                <p className='current'>$960</p>
+                <p className='previous'>$1160</p>
               </div>
               <div className='stars'>
                 <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
@@ -229,16 +240,16 @@ const Home = () => {
               </div>
             </div>
             </div>
-<div className='sale-product'>
+        <div className='sale-product'>
             <div className="sale-product-main">
               <div className="sale-product-btn">
-                <div className='dis-btn'>-40%</div>
+                <div className='dis-btn'>-30%</div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye  className="icon-outline" />
                   </div>
                 </div>
               </div>
@@ -247,10 +258,10 @@ const Home = () => {
               </div>
             </div>
             <div className='sale-product-lower'>
-              <p className='product-name'>HAVIT HV-G92 Gamepad</p>
+              <p className='product-name'>IPS LCD Gaming Monitor</p>
               <div className='price'>
-                <p className='current'>$120</p>
-                <p className='previous'>$160</p>
+                <p className='current'>$370</p>
+                <p className='previous'>$400</p>
               </div>
               <div className='stars'>
                 <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
@@ -263,16 +274,16 @@ const Home = () => {
               </div>
             </div>
             </div>
-              <div className="sale-product">
+          <div className="sale-product">
             <div className="sale-product-main">
               <div className="sale-product-btn">
-                <div className='dis-btn'>-40%</div>
+                <div className='dis-btn'>-25%</div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
-                    <FaHeart className="icon-outline" />
+                    <FaRegHeart  className="icon-outline" />
                   </div>
                   <div className="icon-circle">
-                    <FaEye className="icon-outline" />
+                    <FiEye  className="icon-outline" />
                   </div>
                 </div>
               </div>
@@ -281,10 +292,10 @@ const Home = () => {
               </div>
               </div>
               <div className='sale-product-lower'>
-              <p className='product-name'>HAVIT HV-G92 Gamepad</p>
+              <p className='product-name'>S-Series Comfort Chair </p>
               <div className='price'>
-                <p className='current'>$120</p>
-                <p className='previous'>$160</p>
+                <p className='current'>$375</p>
+                <p className='previous'>$400</p>
               </div>
               <div className='stars'>
                 <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
@@ -297,14 +308,51 @@ const Home = () => {
               </div>
             </div>
               </div>
-           <div className='view-all-products'>
+              <div className="sale-product">
+            <div className="sale-product-main">
+              <div className="sale-product-btn">
+                <div className='dis-btn'>-25%</div>
+                <div className="sale-product-icon">
+                  <div className="icon-circle">
+                    <FaRegHeart  className="icon-outline" />
+                  </div>
+                  <div className="icon-circle">
+                    <FiEye   className="icon-outline" style={{color:"black"}}/>
+                  </div>
+                </div>
+              </div>
+              <div className='sale-product-image'>
+                <img src="./../assets/images/chair.png" className='product-image'/>
+              </div>
+              </div>
+              <div className='sale-product-lower'>
+              <p className='product-name'>HAVIT HV-G92 Gamepad</p>
+              <div className='price'>
+                <p className='current'>$375</p>
+                <p className='previous'>$400</p>
+              </div>
+              <div className='stars'>
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <FaStar style={{ color: "#FFD700", fontSize: "24px" }} />
+                <p style={{color:"gray",width:"24px",height:"24px",fontWeight:"600",fontSize:"14px"}}>(88)</p>
+              </div>
+            </div>
+              </div>
+           
+         </div>
+         <div className='view-all-products'>
             <p>View All Products</p>
            </div>
-         </div>
+        </section>
+        <div className='line'></div>
          
           
-            </section>
-             <section className='browse-container main'>
+    {/* fourth section */}
+             {/* <section className='fout'>
         <div className='browse-by-category'>
         
           <div className='headline-icon'>
@@ -399,14 +447,6 @@ const Home = () => {
               </div>
               </div>
               </section>
-            {/* <div className='category-container'>
-            <div className='category'>
-              <div className='category-icon'>
-                <Smartphone/>
-              </div>
-              <div className='category-text'>Phone</div>
-            </div>
-            </div> */}
             </div>
         <section className='best-selling-section'>
         <div className="sale-product-section">
@@ -484,7 +524,7 @@ const Home = () => {
               </div>
             </div>
             </div>
-<div className='sale-product'>
+      <div className='sale-product'>
             <div className="sale-product-main">
               <div className="sale-product-btn">
                 
@@ -560,7 +600,7 @@ const Home = () => {
               <div className='enhace-text'>
                 <></>
                 <p className='enhance-category'>Categories</p>
-                <p className='enhance-main-text'>Enhance Your Music Experience</p>
+                <p className='enhance-main-text'>Enhance Your <br/> Music Experience</p>
                 <div className='rounded-divs'>
                   <div className="rounded-each">
                     <p className='rounded-number'>23</p>
@@ -586,8 +626,15 @@ const Home = () => {
               <div className='enhace-image'>
                 <img src="./../assets/images/enhance-speaker.png"></img>
               </div>
+            </div> */}
+            
             </div>
-            </div>
+       
+ 
+
+
+            
+              
          
 
           
