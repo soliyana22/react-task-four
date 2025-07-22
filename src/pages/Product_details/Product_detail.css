@@ -13,6 +13,10 @@
   gap: 10px;
   align-items: stretch;
 }
+.product-link{
+    justify-content: flex-start;
+    text-align: left;
+}
 
 .product-mini-images,
 .product-main-image,

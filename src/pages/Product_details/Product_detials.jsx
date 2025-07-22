@@ -18,10 +18,10 @@ const Product_details = () => {
   return (
     <div className="product-details-container">
       <div className="product-link">
-        <a>
+        <a style={{color:"black",opacity:"0.3"}}>
           Account <span>/</span>
         </a>
-        <a>
+        <a style={{color:"black",opacity:"0.3"}}>
           Gaming <span>/</span>
         </a>
         <a>
@@ -80,7 +80,7 @@ const Product_details = () => {
                   checked={selectedColor === 'blue'}
                   onChange={handleChange}
                 />
-                <label htmlFor="blue">Blue</label>
+                
               </div>
               <div className="radio-wrapper">
                 <input
@@ -91,7 +91,7 @@ const Product_details = () => {
                   checked={selectedColor === 'red'}
                   onChange={handleChange}
                 />
-                <label htmlFor="red">Red</label>
+                
               </div>
             </div>
           </div>
