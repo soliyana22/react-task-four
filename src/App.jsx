@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import { Routes, Route } from 'react-router-dom';
 import LogIn from './pages/LogIn/LogIn.jsx'; // <-- default import
+import Product_details from './pages/Product_details/Product_detials.jsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+        <Route path="/productdetail" element={<Product_details/>} />
       </Routes>
       <Footer />
     </div>
