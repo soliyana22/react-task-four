@@ -594,6 +594,109 @@ color:white;
 .sixth-section{
     margin:3rem auto;
 }
+.sixth-section{
+    margin:3rem auto;
+}
+.showcase-container {
+  color: white;
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr; /* Three columns: PS5, Speakers, Perfume */
+  grid-template-rows: auto auto;
+  gap: 40px;
+  background-color: white;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: black;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.grid-item .content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.grid-item .content h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.grid-item .content p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.grid-item .content a {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* Specific Layout Assignments */
+.ps5 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  padding: 2rem;
+}
+
+.women {
+  grid-column: 2 / span 2; /* Span across speakers and perfume columns */
+  grid-row: 1;
+}
+
+.speakers {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.perfume {
+  grid-column: 3;
+  grid-row: 2;
+}
+.last-each{
+    display: flex;
+    justify-content: space-around;
+    margin:10px auto;
+   
+    
+}
+.last-main{
+    flex-direction: column;
+    line-height: 2.5;
+}
+.last-icon{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: black;
+    border:8px solid #9d9b9d;
+    margin:auto 100px;
+    
+}
+.icon{
+    color: white;
+    margin:10px auto;
+}
+.last-section{
+    margin-bottom: 4rem;
+}
+
 /* .sale-product-section-last{
      width:100%;
     max-width: 1308px;
@@ -791,6 +894,40 @@ color:white;
     .category-text {
         font-size: 0.9rem;
     }
+    fourth-section {
+    padding: 1.5rem;
+  }
+
+  .category {
+    width: 140px;
+    height: 110px;
+    padding: 1rem;
+  }
+
+  .category-icon {
+    font-size: 1.75rem;
+  }
+
+  .each-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .category-text {
+    font-size: 0.9rem;
+  }
+
+  .today-text {
+    font-size: 1.3rem;
+  }
+
+  .flash-sale-title {
+    font-size: 1.1rem;
+  }
+
+  .category-wrapper {
+    gap: 0.75rem;
+  }
 }
 
 /* Media Queries for Mobile (≤480px) */
@@ -916,4 +1053,235 @@ color:white;
     .category-text {
         font-size: 0.8rem;
     }
+    .fourth-section {
+    padding: 1rem;
+  }
+
+  .category {
+    width: 100px;
+    height: 90px;
+    padding: 0.75rem;
+  }
+
+  .category-icon {
+    font-size: 1.5rem;
+  }
+
+  .each-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .category-text {
+    font-size: 0.8rem;
+  }
+
+  .today-text {
+    font-size: 1.2rem;
+  }
+
+  .flash-sale-title {
+    font-size: 1rem;
+  }
+
+  .flash-sale-icon {
+    gap: 0.5rem;
+  }
+
+  .flash-sale-bg {
+    padding: 0.4rem;
+  }
+
+  .category-wrapper {
+    gap: 0.5rem;
+  }
+      .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .ps5 {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1rem;
+  }
+
+  .women {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .speakers {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .perfume {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .grid-item .content h2 {
+    font-size: 18px;
+  }
+
+  .grid-item .content p {
+    font-size: 12px;
+  }
+
+  .grid-item .content a {
+    font-size: 12px;
+  }
+  .sale-product-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+    grid-template-rows: auto auto auto;
+  }
+
+  .sale-product:nth-child(n+3) {
+    grid-row-start: 2;
+  }
+
+  .sale-product:nth-child(n+5) {
+    grid-row-start: 3;
+  }
+
+  .sale-product-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dis-btn {
+    margin-bottom: 10px;
+  }
+  .showcase-container {
+    padding: 15px;
+  }
+
+  .grid-container {
+    gap: 20px;
+  }
+
+  .grid-item .content {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .grid-item .content h2 {
+    font-size: 16px;
+  }
+
+  .grid-item .content p {
+    font-size: 10px;
+  }
+
+  .grid-item .content a {
+    font-size: 10px;
+  }
+  .sale-product-section {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    grid-template-rows: 2fr;
+  }
+
+  .sale-product {
+    grid-row-start: auto;
+  }
+
+  .sale-product-btn {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dis-btn {
+    margin-bottom: 0;
+  }
+
+  .sale-product-main {
+    gap: 5px;
+  }
+  .sale-product-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .sale-product-main {
+        padding: 0.5rem;
+    }
+
+    .product-image {
+        width: 100%;
+        max-height: 150px;
+        margin-bottom: 2rem;
+        margin-top: -1rem;
+    }
+
+    .dis-btn {
+        width: 45px;
+        height: 22px;
+        font-size: 0.8rem;
+        left: 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-outline {
+        font-size: 1rem;
+    }
+
+    .sale-product-lower {
+        padding: 0.5rem;
+    }
+
+    .view-all-products {
+        max-width: 180px;
+        height: 48px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .line {
+        margin-top: 2rem;
+    }
+
+    /* Fourth Section */
+    .fourth-section {
+        margin: 2rem auto;
+    }
+
+    .fourth-section-main {
+        gap: 1rem;
+    }
+
+    .category-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    .category {
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+        padding: 1rem;
+    }
+
+    .each-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .category-text {
+        font-size: 0.9rem;
+    }
+    .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
 }
+

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Home.css'
 import { FiEye } from "react-icons/fi";
 import { FaApple,FaArrowLeft,FaArrowRight,FaStar,FaRegHeart,FaCamera,FaHeadphones,FaGamepad} from "react-icons/fa";
-import { ChevronRight,Smartphone,Monitor,Watch } from 'lucide-react';
+import { ChevronRight,Smartphone,Monitor,Watch, Verified,Truck } from 'lucide-react';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -903,6 +903,86 @@ const Home = () => {
   </div>
   <div className='line'></div>
 </section>
+
+<section class="seventh-section">
+      <div className="showcase-container">
+      <div className="grid-container">
+        {/* Left - PS5 */}
+        <div className="grid-item ps5">
+          <img src="img src=./../assets/images/PS-5.png" alt="PlayStation 5" />
+          <div className="content">
+            <h2>PlayStation 5</h2>
+            <p>Black and White version of the PS5 coming out on sale.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+
+        {/* Right - Women's Collection */}
+        <div className="grid-item women">
+          <img src="./../assets/images/women-photo.jpg" alt="Women's Collections" />
+          <div className="content">
+            <h2>Women’s Collections</h2>
+            <p>Featured woman collections that give you another vibe.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+
+        {/* Right Bottom - Speakers */}
+        <div className="grid-item speakers">
+          <img src="./../assets/images/amazon-speaker.png" alt="Speakers" />
+          <div className="content">
+            <h2>Speakers</h2>
+            <p>Amazon wireless speakers</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+
+        {/* Right Bottom - Perfume */}
+        <div className="grid-item perfume">
+          <img src="./../assets/images/Gucci-perfume.png" alt="Perfume" />
+          <div className="content">
+            <h2>Perfume</h2>
+            <p>GUCCI INTENSE OUD EDP</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    </section>
+    <section className='last-section'>
+      <div className='last-each'>
+        <div className='last-main'>
+        <div className='last-icon'>
+          <Truck className='icon'/>
+        </div>
+          <div className='last-text'>
+          <h5 className='last-text-heding'>FREE AND FAST DELIVERY</h5>
+          <p className='last-text-text'>Free delivery for all orders over $140</p>
+          </div>
+      </div>
+        
+        <div className='last-main'>
+        <div className='last-icon'>
+          <FaHeadphones className='icon'/>
+        </div>
+          <div className='last-text'>
+          <h5 className='last-text-heding'>FREE AND FAST DELIVERY</h5>
+          <p className='last-text-text'>Free delivery for all orders over $140</p>
+          </div>
+      </div>
+        <div className='last-main'>
+        <div className='last-icon'>
+          <Verified className='icon'/>
+        </div>
+          <div className='last-text'>
+          <h5 className='last-text-heding'>FREE AND FAST DELIVERY</h5>
+          <p className='last-text-text'>Free delivery for all orders over $140</p>
+          </div>
+      </div>
+        </div>
+     
+    </section>
 
             </div> 
           
