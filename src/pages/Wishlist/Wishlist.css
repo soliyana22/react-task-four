@@ -1,0 +1,21 @@
+.headline-icon{
+    justify-content: space-between;
+}
+.see-all{
+    border:1px solid black;
+    padding:20px;
+    width:150px;
+    height:56px;
+    border-radius: 2px;
+    background-color: white;
+}
+.wishlist-container{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.add-cart{
+    background-color: black;
+    color: white;
+    height:60px;
+}

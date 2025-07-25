@@ -23,10 +23,10 @@ const Navigation_list = () => {
       {/* Nav Links */}
       <div className={`navigation ${menuOpen ? 'show' : ''}`}>
         <nav className="navigation-lists">
-          <Link to="/home" className="navigation-page">Home</Link>
+          <Link to="/" className="navigation-page">Home</Link>
           <Link to="/contact" className="navigation-page">Contact</Link>
           <Link to="/about" className="navigation-page">About</Link>
-          <Link to="/" className="navigation-page">Sign Up</Link>
+          <Link to="/signup" className="navigation-page">Sign Up</Link>
         </nav>
       </div>
 

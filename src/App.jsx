@@ -10,6 +10,7 @@ import About from './pages/About';
 import { Routes, Route } from 'react-router-dom';
 import LogIn from './pages/LogIn/LogIn.jsx'; // <-- default import
 import Product_details from './pages/Product_details/Product_detials.jsx';
+import  Wishlist from './pages/Wishlist/Wishlist.jsx';
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
       <Header />
       <Navigation_list />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/productdetail" element={<Product_details/>} />
+        <Route path="/wishlist" element={<Wishlist/>} />
       </Routes>
       <Footer />
     </div>
