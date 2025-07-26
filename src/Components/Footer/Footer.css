@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,7 @@
   margin: 0;
   padding: 0 20px;
   line-height: 2.5;
-  margin-top:auto;
-  /* Removed fixed min-height to allow dynamic stretching */
+  margin-top: auto;
 }
 
 .footer-container {
@@ -63,7 +63,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: #000;
-  /* Removed negative margin-top to avoid overlapping */
 }
 
 .qr {
@@ -74,7 +73,6 @@
 .store-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Added gap for spacing between buttons */
 }
 
 .store-buttons img {
@@ -85,7 +83,6 @@
   object-fit: contain;
 }
 
-/* Removed negative margin-top for stacking */
 .store-buttons img + img {
   margin-top: 0;
 }
@@ -93,14 +90,16 @@
 .social-icons {
   display: flex;
   gap: 40px;
-  margin-top: 10px; /* Adjusted to positive value */
+  margin-top: 10px;
 }
 
 .copy-right {
   color: white;
   opacity: 0.5;
 }
-@media (max-width: 768px) { /* Tablet */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     gap: 20px;
@@ -122,11 +121,10 @@
 
   .store-buttons {
     flex-direction: row;
-    gap: 10px;
   }
 
   .store-buttons img {
-    width: 120px;
+    width: 150px; /* Preserved original size */
   }
 
   .social-icons {
@@ -135,7 +133,8 @@
   }
 }
 
-@media (max-width: 480px) { /* Mobile */
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
   .footer-wrapper {
     padding: 0 10px;
   }
@@ -149,12 +148,12 @@
   }
 
   .qr {
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Preserved original size */
+    height: 100px;
   }
 
   .store-buttons img {
-    width: 100px;
+    width: 150px; /* Preserved original size */
   }
 
   .social-icons {

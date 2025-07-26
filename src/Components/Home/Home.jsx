@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import './Home.css'
 import { FiEye } from "react-icons/fi";
 import { FaApple,FaArrowLeft,FaArrowRight,FaStar,FaRegHeart,FaCamera,FaHeadphones,FaGamepad} from "react-icons/fa";
-import { ChevronRight,Smartphone,Monitor,Watch, Verified,Truck } from 'lucide-react';
+import { ChevronRight,Smartphone,Monitor,Watch, Verified,Truck,ShoppingCart } from 'lucide-react';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+   const [selectedColor, setSelectedColor] = useState('blue'); 
+   const handleChange = (e) => {
+    setSelectedColor(e.target.id === 'first' ? 'blue' : 'red');
+  };
   return (
     <div className='home-container'>
       <section className='first-section'>
@@ -184,6 +188,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/GamePad.png" className='product-image'/>
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             
             </div>
             <div className='sale-product-lower'>
@@ -222,6 +227,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/keyboard.png" className='product-image'/>
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>AK-900 Wired Keyboard</p>
@@ -256,6 +262,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/TV.png" className='product-image'/>
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>IPS LCD Gaming Monitor</p>
@@ -291,6 +298,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/chair.png" className='product-image'/>
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
               </div>
               <div className='sale-product-lower'>
               <p className='product-name'>HAVIT HV-G92 Gamepad</p>
@@ -356,7 +364,7 @@ const Home = () => {
               <div className='category-icon'>
                 <Monitor className='each-icon'/>
               </div>
-              <div className='category-text'></div>
+              <div className='category-text'>Computer</div>
             </div>
             </div>
             <div className='category-container'>
@@ -364,7 +372,7 @@ const Home = () => {
               <div className='category-icon'>
                 <Watch className='each-icon'/>
               </div>
-              <div className='category-text'>Phone</div>
+              <div className='category-text'>Watch</div>
             </div>
             </div>
             <div className='category-container'>
@@ -373,7 +381,7 @@ const Home = () => {
               <div className='category-icon'>
                 <FaCamera className='each-icon'/>
               </div>
-              <div className='category-text'>Phone</div>
+              <div className='category-text'>Camera</div>
             </div>
             </div>
             <div className='category-container'>
@@ -381,7 +389,7 @@ const Home = () => {
               <div className='category-icon'>
                 <FaHeadphones className='each-icon'/>
               </div>
-              <div className='category-text'>Phone</div>
+              <div className='category-text'>Headphones</div>
             </div>
             </div>
             <div className='category-container'>
@@ -389,7 +397,7 @@ const Home = () => {
               <div className='category-icon'>
                 <FaGamepad className='each-icon'/>
               </div>
-              <div className='category-text'>Phone</div>
+              <div className='category-text'>Game pad</div>
             </div>
             </div>
             </div>
@@ -893,6 +901,30 @@ const Home = () => {
       
           <p style={{ color: "gray", fontWeight: "600", fontSize: "14px" }}>(55)</p>
         </div>
+         <div className="radio-container">
+              <div className="radio-wrapper">
+                <input
+                  type="radio"
+                  id="first"
+                  name="color"
+                  className="custom-radio"
+                  checked={selectedColor === '#FB1314'}
+                  onChange={handleChange}
+                />
+                
+              </div>
+              <div className="radio-wrapper">
+                <input
+                  type="radio"
+                  id="second"
+                  name="color"
+                  className="custom-radio red"
+                  checked={selectedColor === 'red'}
+                  onChange={handleChange}
+                />
+                
+              </div>
+            </div>
       </div>
     </div>
     
@@ -985,20 +1017,6 @@ const Home = () => {
     </section>
 
             </div> 
-          
-           
-       
- 
-
-
-            
-              
-         
-
-          
-       
-
-     
    
   )
 }

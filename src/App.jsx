@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 import LogIn from './pages/LogIn/LogIn.jsx'; // <-- default import
 import Product_details from './pages/Product_details/Product_detials.jsx';
 import  Wishlist from './pages/Wishlist/Wishlist.jsx';
+import { Cart } from './pages/Cart/Cart.jsx';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/productdetail" element={<Product_details/>} />
         <Route path="/wishlist" element={<Wishlist/>} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
       <Footer />
     </div>

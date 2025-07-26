@@ -1,8 +1,10 @@
 import React from 'react'
-import { FaStar,FaCart } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import {FiEye} from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
+import { ShoppingCart } from 'lucide-react';
 import './Wishlist.css'
+
 const Wishlist = () => {
   return (
     <div className='wishlist-container'>
@@ -35,7 +37,7 @@ const Wishlist = () => {
                     <div className="sale-product-image">
                       <img src="./../assets/images/Bag.png" className="product-image" />
                     </div>
-                    <div className='add-cart'><FaCart/>Add to Cart</div>
+                    <div className='add-cart'><ShoppingCart/>Add to Cart</div>
                   </div>
                   <div className="sale-product-lower">
                     <p className="product-name">Gucci duffle bag</p>
@@ -62,6 +64,7 @@ const Wishlist = () => {
                     <div className="sale-product-image">
                       <img src="./../assets/images/Speaker.png" className="product-image" />
                     </div>
+                    <div className='add-cart'><ShoppingCart/>Add to Cart</div>
                   </div>
                   <div className="sale-product-lower">
                     <p className="product-name">RGB liquid CPU Cooler</p>
@@ -88,6 +91,7 @@ const Wishlist = () => {
                     <div className="sale-product-image">
                       <img src="./../assets/images/black_gamepad.png" className="product-image" />
                     </div>
+                    <div className='add-cart'><ShoppingCart/>Add to Cart</div>
                   </div>
                   <div className="sale-product-lower">
                     <p className="product-name">Quilted Satin Jacket</p>
@@ -114,6 +118,7 @@ const Wishlist = () => {
                     <div className="sale-product-image">
                       <img src="./../assets/images/women_jacket.png" className="product-image" />
                     </div>
+                    <div className='add-cart'><ShoppingCart/>Add to Cart</div>
                   </div>
                   <div className="sale-product-lower">
                     <p className="product-name">Quilted Satin Jacket</p>
@@ -156,6 +161,7 @@ const Wishlist = () => {
               <div className="sale-product-image">
                 <img src="./../assets/images/laptop.png" className="product-image" />
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className="sale-product-lower">
               <p className="product-name">ASUS FHD Gaming Laptop</p>
@@ -200,6 +206,7 @@ const Wishlist = () => {
               <div className="sale-product-image">
                 <img src="./../assets/images/TV.png" className="product-image" />
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className="sale-product-lower">
               <p className="product-name">IPS LCD Gaming Monitor</p>
@@ -244,6 +251,7 @@ const Wishlist = () => {
               <div className="sale-product-image">
                 <img src="./../assets/images/GamePad.png" className="product-image" />
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className="sale-product-lower">
               <p className="product-name">IPS LCD Gaming Monitor</p>
@@ -286,7 +294,9 @@ const Wishlist = () => {
               </div>
               <div className="sale-product-image">
                 <img src="./../assets/images/keyboard.png" className="product-image" />
+
               </div>
+              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
             </div>
             <div className="sale-product-lower">
               <p className="product-name">AK-900 Wired Keyboard</p>
