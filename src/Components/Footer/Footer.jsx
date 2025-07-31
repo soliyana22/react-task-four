@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { FiSend } from "react-icons/fi";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import './Footer.css';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className='footer-wrapper'>
       <div className='footer-container'>
@@ -28,7 +29,7 @@ const Footer = () => {
           <p>My Account</p>
           <p>Login / Register</p>
           <p>Cart</p>
-          <p>Wishlist</p>
+          <p onClick={() => navigate('/wishlist')}>Wishlist</p>
           <p>Shop</p>
         </div>
         <div className='footer-column'>
@@ -43,8 +44,8 @@ const Footer = () => {
           <div className="download-method">
             <img className="qr" src="./../assets/images/QR_code.jpg" alt="QR Code" />
             <div className="store-buttons">
-              <img src="./../assets/images/Google_play.png" alt="Google Play" />
-              <img src="./../assets/images/App_store.png" alt="App Store" />
+              <img src="./../assets/images/Google_play.png" className='goole-img' alt="Google Play" />
+              <img src="./../assets/images/App_store.png" className='apple-img'alt="App Store" />
             </div>
           </div>
           <div className="social-icons">

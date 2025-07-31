@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css'
 import { FiEye } from "react-icons/fi";
 import { FaApple,FaArrowLeft,FaArrowRight,FaStar,FaRegHeart,FaCamera,FaHeadphones,FaGamepad} from "react-icons/fa";
@@ -7,9 +8,18 @@ import { ChevronRight,Smartphone,Monitor,Watch, Verified,Truck,ShoppingCart } fr
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
    const [selectedColor, setSelectedColor] = useState('blue'); 
+   const [cartItems, setCartItems] = useState([]);
+   const navigate = useNavigate();
+
    const handleChange = (e) => {
     setSelectedColor(e.target.id === 'first' ? 'blue' : 'red');
   };
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+    navigate('/cart', { state: { cartItems: [...cartItems, product] } });
+  };
+
   return (
     <div className='home-container'>
       <section className='first-section'>
@@ -28,7 +38,6 @@ const Home = () => {
                 <p>Men’s Fashion</p>
               </div>
               <div className='nav-icon'>
-                <ChevronRight/>
               </div>
             </div>
             <div className='nav-each'>
@@ -188,7 +197,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/GamePad.png" className='product-image'/>
               </div>
-              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
+              <div className='add-cart' onClick={() => addToCart({ name: 'HAVIT HV-G92 Gamepad', image: './../assets/images/GamePad.png', currentPrice: 120 })}><ShoppingCart/>Add to Cart</div>
             
             </div>
             <div className='sale-product-lower'>
@@ -227,7 +236,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/keyboard.png" className='product-image'/>
               </div>
-              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
+              <div className='add-cart' onClick={() => addToCart({ name: 'AK-900 Wired Keyboard', image: './../assets/images/keyboard.png', currentPrice: 960 })}><ShoppingCart/>Add to Cart</div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>AK-900 Wired Keyboard</p>
@@ -262,7 +271,7 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/TV.png" className='product-image'/>
               </div>
-              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
+              <div className='add-cart' onClick={() => addToCart({ name: 'IPS LCD Gaming Monitor', image: './../assets/images/TV.png', currentPrice: 370 })}><ShoppingCart/>Add to Cart</div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>IPS LCD Gaming Monitor</p>
@@ -298,10 +307,10 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/chair.png" className='product-image'/>
               </div>
-              <div className='add-cart'><ShoppingCart/>Add to Cart</div>
+              <div className='add-cart' onClick={() => addToCart({ name: 'S-Series Comfort Chair', image: './../assets/images/chair.png', currentPrice: 375 })}><ShoppingCart/>Add to Cart</div>
               </div>
               <div className='sale-product-lower'>
-              <p className='product-name'>HAVIT HV-G92 Gamepad</p>
+              <p className='product-name'>S-Series Comfort Chair</p>
               <div className='price'>
                 <p className='current'>$375</p>
                 <p className='previous'>$400</p>
@@ -908,7 +917,7 @@ const Home = () => {
                   id="first"
                   name="color"
                   className="custom-radio"
-                  checked={selectedColor === '#FB1314'}
+                  checked={selectedColor === 'blue'}
                   onChange={handleChange}
                 />
                 
@@ -936,12 +945,12 @@ const Home = () => {
   <div className='line'></div>
 </section>
 
-<section class="seventh-section">
+<section className="seventh-section">
       <div className="showcase-container">
       <div className="grid-container">
         {/* Left - PS5 */}
         <div className="grid-item ps5">
-          <img src="img src=./../assets/images/PS-5.png" alt="PlayStation 5" />
+          <img src="./../assets/images/PS-5.png" alt="PlayStation 5" />
           <div className="content">
             <h2>PlayStation 5</h2>
             <p>Black and White version of the PS5 coming out on sale.</p>

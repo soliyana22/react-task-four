@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.error-container{
+    justify-content: center;
+    align-items: center;
+
+}
+.error-message{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+
+}
+.error-message .main{
+    
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 110px;
+    line-height: 115px;
+    letter-spacing: 3%;
+
+}
+.back-button-main{
+    background-color: #DB4444;
+    width: 254px;
+    height: 56px;
+    gap: 10px;
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-right: 48px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    border:none;
+    color:white;
+    margin: 4rem auto;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: flex-start;
+    gap:10px;
+}
+.Inactive{
+    color:black;
+    opacity:0.5;
+}
