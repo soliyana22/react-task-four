@@ -181,7 +181,8 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/GamePad.png" className='product-image' />
               </div>
-              <div className='add-cart' onClick={() => handleAddToCart({ name: 'HAVIT HV-G92 Gamepad', image: './../assets/images/GamePad.png', currentPrice: 120 })}><div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
+              <div className='add-cart' onClick={() => handleAddToCart({ name: 'HAVIT HV-G92 Gamepad', image: './../assets/images/GamePad.png', currentPrice: 120 })}>
+                <div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>HAVIT HV-G92 Gamepad</p>
@@ -215,7 +216,8 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/keyboard.png" className='product-image' />
               </div>
-              <div className='add-cart' onClick={() => handleAddToCart({ name: 'AK-900 Wired Keyboard', image: './../assets/images/keyboard.png', currentPrice: 960 })}><div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
+              <div className='add-cart' onClick={() => handleAddToCart({ name: 'AK-900 Wired Keyboard', image: './../assets/images/keyboard.png', currentPrice: 960 })}>
+                <div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>AK-900 Wired Keyboard</p>
@@ -249,7 +251,8 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/TV.png" className='product-image' />
               </div>
-              <div className='add-cart' onClick={() => handleAddToCart({ name: 'IPS LCD Gaming Monitor', image: './../assets/images/TV.png', currentPrice: 370 })}><div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
+              <div className='add-cart' onClick={() => handleAddToCart({ name: 'IPS LCD Gaming Monitor', image: './../assets/images/TV.png', currentPrice: 370 })}>
+                <div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>IPS LCD Gaming Monitor</p>
@@ -283,7 +286,8 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/chair.png" className='product-image' />
               </div>
-              <div className='add-cart' onClick={() => handleAddToCart({ name: 'S-Series Comfort Chair', image: './../assets/images/chair.png', currentPrice: 375 })}><ShoppingCart />Add to Cart</div>
+              <div className='add-cart' onClick={() => handleAddToCart({ name: 'S-Series Comfort Chair', image: './../assets/images/chair.png', currentPrice: 375 })}>
+                <div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>S-Series Comfort Chair</p>

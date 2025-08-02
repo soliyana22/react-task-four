@@ -135,8 +135,7 @@
     padding: 8px 10px;
     flex-wrap: wrap;
     position: relative;
-    height:auto;
-    
+    height: auto;
   }
 
   .exclusive_text {
@@ -146,7 +145,6 @@
   .menu-toggle {
     display: block;
     z-index: 1001;
-    
   }
 
   .navigation {
@@ -156,14 +154,12 @@
   .navigation.show {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     background-color: #f8f8f8;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     box-sizing: border-box;
-
   }
 
   .navigation-lists {
@@ -172,7 +168,7 @@
     align-items: flex-start;
     width: 100%;
     min-height: 200px;
-    height:auto;
+    height: auto;
   }
 
   .navigation-page {
@@ -232,7 +228,7 @@
   }
 
   .exclusive_text {
-    margin-top:2rem;
+    margin-top: 2rem;
     font-size: 1rem;
   }
 

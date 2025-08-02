@@ -22,6 +22,13 @@ const Navigation_list = () => {
     console.log('isLoggedIn:', isLoggedIn, 'Location:', location.pathname);
   }, [isLoggedIn, location.pathname]);
 
+  // Function to check if screen is small and close menu on link click
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 768) {
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <div className="navigation-container">
       <div className="exclusive_text">
@@ -32,10 +39,10 @@ const Navigation_list = () => {
       </button>
       <div className={`navigation ${menuOpen ? 'show' : ''}`}>
         <nav className="navigation-lists">
-          <Link to="/" className="navigation-page">Home</Link>
-          <Link to="/contact" className="navigation-page">Contact</Link>
-          <Link to="/about" className="navigation-page">About</Link>
-          <Link to="/signup" className="navigation-page">Sign Up</Link>
+          <Link to="/" className="navigation-page" onClick={handleLinkClick}>Home</Link>
+          <Link to="/contact" className="navigation-page" onClick={handleLinkClick}>Contact</Link>
+          <Link to="/about" className="navigation-page" onClick={handleLinkClick}>About</Link>
+          <Link to="/signup" className="navigation-page" onClick={handleLinkClick}>Sign Up</Link>
         </nav>
       </div>
       <div className="input_type">
