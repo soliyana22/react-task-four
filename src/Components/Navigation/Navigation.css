@@ -136,7 +136,7 @@
     flex-wrap: wrap;
     position: relative;
     height:auto;
-    min-height: 250px;
+    
   }
 
   .exclusive_text {
@@ -146,6 +146,7 @@
   .menu-toggle {
     display: block;
     z-index: 1001;
+    
   }
 
   .navigation {
@@ -172,6 +173,8 @@
     gap: 12px;
     align-items: flex-start;
     width: 100%;
+    min-height: 250px;
+    height:auto;
   }
 
   .navigation-page {
