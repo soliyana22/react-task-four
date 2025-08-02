@@ -1,12 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import './Cart.css';
 import { useNavigate } from 'react-router-dom';
+import './Cart.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart } from '../../redux/cartSlice';
+import {X} from 'lucide-react'
 
 export const Cart = () => {
-  const { state } = useLocation();
-  const cartItems = state?.cartItems || [];
-    const navigate=useNavigate()
+  const cartItems = useSelector((state) => state.cart.items); // Correct path
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <div className='cart-container'>
       <div className='cart-link'>
@@ -19,16 +22,20 @@ export const Cart = () => {
           <p>Price</p>
           <p>Quantity</p>
           <p>Subtotal</p>
+          <p>Action</p>
         </div>
         {cartItems.map((item, index) => (
-          <div className='row second-row' key={index}>
+          <div className='row second-row' key={item.id}> {/* Use item.id for unique key */}
             <div className='product-details'>
-              <img src={item.image} alt={item.name} style={{ width: '50px', height: '50px' }} />
+              <img src={item.image} alt={item.name} style={{ width: '50px', height: '50px' }} /><X onClick={() => dispatch(removeFromCart(item.id))} size={10} style={{color:"#DB4444;"}}/> {/* Use item.id */}
               <p>{item.name}</p>
             </div>
             <div>${item.currentPrice}</div>
-            <div>1</div>
-            <div>${item.currentPrice}</div>
+            <div>{item.quantity}</div> {/* Dynamic quantity */}
+            <div>${item.currentPrice * item.quantity}</div> {/* Subtotal with quantity */}
+            <div>
+              
+            </div>
           </div>
         ))}
       </div>
@@ -44,7 +51,7 @@ export const Cart = () => {
             </div>
             <div className='cart-total-each'>
               <div>Subtotal:</div>
-              <p>${cartItems.reduce((total, item) => total + item.currentPrice, 0)}</p>
+              <p>${cartItems.reduce((total, item) => total + item.currentPrice * item.quantity, 0)}</p>
             </div>
             <div className='line'></div>
             <div className='cart-total-each'>
@@ -54,7 +61,7 @@ export const Cart = () => {
             <div className='line'></div>
             <div className='cart-total-each'>
               <p>Total:</p>
-              <p>${cartItems.reduce((total, item) => total + item.currentPrice, 0)}</p>
+              <p>${cartItems.reduce((total, item) => total + item.currentPrice * item.quantity, 0)}</p>
             </div>
             <div className='checkout'>
               <button className='checkout-btn' onClick={() => navigate('/about')}>Proceed to checkout</button>
@@ -65,3 +72,5 @@ export const Cart = () => {
     </div>
   );
 };
+
+export default Cart;

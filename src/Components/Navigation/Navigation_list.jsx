@@ -4,12 +4,12 @@ import { FiHeart } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navigation.css';
-import { AuthContext } from '../../util/AuthContext';
+import { AuthContext } from '../../util/AuthContext.jsx';
 
 const Navigation_list = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { isLoggedIn, logout } = useContext(AuthContext) || { isLoggedIn: false, logout: () => {} };
+  const { isLoggedIn, logout } = useContext(AuthContext);
   const location = useLocation();
 
   const toggleDropdown = () => {

@@ -4,10 +4,12 @@
 .see-all{
     border:1px solid black;
     padding:20px;
-    width:150px;
+    width:160px;
     height:56px;
     border-radius: 2px;
     background-color: white;
+    color: black;
+    padding: 1rem;
 }
 .wishlist-container{
     display: flex;

@@ -61,7 +61,7 @@
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    height: auto;
+    height: 80px;
     padding: 0px;
     text-align: center;
   }
