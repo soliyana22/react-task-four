@@ -8,6 +8,7 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .rows {
@@ -127,6 +128,7 @@
   border-radius: 2px;
   width: 100%;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .line {
@@ -137,4 +139,147 @@
   opacity: 0.1;
 }
 
-/* Tablet (up to 768px) 
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .cart-link {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .rows {
+    gap: 1.5rem;
+  }
+
+  .first-row,
+  .second-row {
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .first-row {
+    font-size: 0.85rem;
+  }
+
+  .second-row {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.85rem;
+  }
+
+  .product-details {
+    gap: 8px;
+  }
+
+  .product-details img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-main-buttons {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .cart-coupon {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .cart-coupon button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .cart-total-main {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .cart-total-each {
+    font-size: 0.8rem;
+  }
+
+  .cart-total-each h5 {
+    font-size: 1rem;
+  }
+
+  .checkout .checkout-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 8px;
+  }
+
+  .cart-link {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rows {
+    gap: 1rem;
+  }
+
+  .first-row {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .second-row {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  .product-details {
+    gap: 6px;
+  }
+
+  .product-details img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .cart-main-buttons {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .cart-coupon {
+    gap: 0.5rem;
+  }
+
+  .cart-coupon button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    max-width: 150px;
+  }
+
+  .cart-total-main {
+    padding: 0.6rem;
+  }
+
+  .cart-total-each {
+    font-size: 0.75rem;
+  }
+
+  .cart-total-each h5 {
+    font-size: 0.9rem;
+  }
+
+  .checkout .checkout-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
