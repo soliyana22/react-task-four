@@ -135,7 +135,8 @@
     padding: 8px 10px;
     flex-wrap: wrap;
     position: relative;
-    height:200px;
+    height:auto;
+    min-height: 250px;
   }
 
   .exclusive_text {

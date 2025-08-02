@@ -373,6 +373,13 @@
     margin-top: -30px;
     object-fit: contain;
 }
+.add-to-cart-text{
+    display: flex;
+    margin:15px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 .icon-circle {
     width: 50px;
