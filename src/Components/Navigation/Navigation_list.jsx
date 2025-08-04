@@ -100,7 +100,7 @@ const Navigation_list = () => {
                 size={22}
                 onClick={toggleDropdown}
               />
-              {isLoggedIn && isDropdownOpen && (
+             {isDropdownOpen && (
                 <ul className="user-dropdown" role="menu">
                   <li className="menuitem">
                     <Link to="/my-account" onClick={() => setIsDropdownOpen(false)}>
