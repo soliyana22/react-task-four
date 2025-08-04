@@ -1,8 +1,8 @@
-// Navigation_list.jsx
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { SearchIcon, ShoppingCart, User, Menu, X } from 'lucide-react';
 import { FiHeart } from 'react-icons/fi';
-import { Link, useLocation, useNavigate } from 'react-router-dom'; // Added useNavigate
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'; // Added useSelector
 import './Navigation.css';
 import { AuthContext } from '../../util/AuthContext.jsx';
 
@@ -11,8 +11,11 @@ const Navigation_list = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { isLoggedIn, logout } = useContext(AuthContext);
   const location = useLocation();
-  const navigate = useNavigate(); // Added navigate
+  const navigate = useNavigate();
   const dropdownRef = useRef(null);
+  // Get cart items from Redux store and calculate total items
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -37,8 +40,8 @@ const Navigation_list = () => {
 
   // Log debug info on render
   useEffect(() => {
-    console.log('Render - isLoggedIn:', isLoggedIn, 'Location:', location.pathname, 'menuOpen:', menuOpen, 'isDropdownOpen:', isDropdownOpen);
-  }, [isLoggedIn, location.pathname, menuOpen, isDropdownOpen]);
+    console.log('Render - isLoggedIn:', isLoggedIn, 'Location:', location.pathname, 'menuOpen:', menuOpen, 'isDropdownOpen:', isDropdownOpen, 'cartItemCount:', cartItemCount);
+  }, [isLoggedIn, location.pathname, menuOpen, isDropdownOpen, cartItemCount]);
 
   const handleLinkClick = () => {
     if (window.innerWidth <= 768) {
@@ -77,11 +80,34 @@ const Navigation_list = () => {
 
         <div className="icons">
           <FiHeart className="heart-icon" size={22} />
-          <ShoppingCart
-            className="shopping-cart"
-            size={22}
-            onClick={() => navigate('/cart')} // Navigate to cart on click
-          />
+          <div className="cart-icon-wrapper" style={{ position: 'relative' }}>
+            <ShoppingCart
+              className="shopping-cart"
+              size={22}
+              onClick={() => navigate('/cart')}
+            />
+            {cartItemCount > 0 && (
+              <span
+                style={{
+                  position: 'absolute',
+                  top: '-8px',
+                  right: '-8px',
+                  backgroundColor: '#DB4444',
+                  color: 'white',
+                  borderRadius: '50%',
+                  width: '18px',
+                  height: '18px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                }}
+              >
+                {cartItemCount}
+              </span>
+            )}
+          </div>
           {isLoggedIn && (
             <div className="user-icon-wrapper" ref={dropdownRef}>
               <User
