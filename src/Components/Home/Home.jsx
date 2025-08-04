@@ -20,9 +20,9 @@ const Home = () => {
     dispatch(setSelectedColor(e.target.id === 'first' ? 'blue' : 'red'));
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
-    navigate('/cart');
+ const handleAddToCart = (product) => {
+   
+    dispatch(addToCart({ ...product, id: product.name + Date.now() })); // Using name + timestamp for unique ID
   };
 
   return (
@@ -577,11 +577,11 @@ const Home = () => {
         <div className='flash-sales-container'>
           <div className='headline-icon'>
             <div className='today-icon'></div>
-            <div className='today-text'>This Month</div>
+            <div className='today-text'>Our Products</div>
           </div>
           <div className='flash-sale-heading'>
             <div className='flash-sale-title'>
-              <p className='flash-sale-title'>Best Selling Products</p>
+              <p className='flash-sale-title'>Explore Our Products</p>
             </div>
             <div className='flash-sale-icon'>
               <div className='flash-sale-bg'>

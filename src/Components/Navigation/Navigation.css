@@ -74,6 +74,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  overflow: visible; /* Ensure icons are not clipped */
 }
 
 .heart-icon,
@@ -81,6 +82,7 @@
 .user {
   transition: color 0.2s;
   cursor: pointer;
+  display: block; /* Ensure visibility */
 }
 
 .heart-icon:hover,
@@ -91,6 +93,7 @@
 
 .user-icon-wrapper {
   position: relative;
+  z-index: 1001; /* Ensure it stays above other elements */
 }
 
 .user-dropdown {
@@ -129,6 +132,18 @@
 .user-dropdown span:hover {
   color: #007bff;
 }
+.user-dropdown {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-dropdown.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
 
 @media (max-width: 768px) {
   .navigation-container {
@@ -200,6 +215,7 @@
     justify-content: flex-end;
     width: 100%;
     gap: 12px;
+    overflow: visible; /* Ensure icons are not clipped */
   }
 
   .heart-icon,
@@ -207,6 +223,7 @@
   .user {
     width: 20px;
     height: 20px;
+    display: block; /* Ensure visibility */
   }
 
   .user-dropdown {
@@ -257,6 +274,7 @@
 
   .icons {
     gap: 10px;
+    overflow: visible; /* Ensure icons are not clipped */
   }
 
   .heart-icon,
@@ -264,6 +282,7 @@
   .user {
     width: 18px;
     height: 18px;
+    display: block; /* Ensure visibility */
   }
 
   .user-dropdown {

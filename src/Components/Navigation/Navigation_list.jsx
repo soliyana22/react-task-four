@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { SearchIcon, ShoppingCart, User } from 'lucide-react';
+// Navigation_list.jsx
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import { SearchIcon, ShoppingCart, User, Menu, X } from 'lucide-react';
 import { FiHeart } from 'react-icons/fi';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Added useNavigate
 import './Navigation.css';
 import { AuthContext } from '../../util/AuthContext.jsx';
 
@@ -11,18 +11,35 @@ const Navigation_list = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { isLoggedIn, logout } = useContext(AuthContext);
   const location = useLocation();
+  const navigate = useNavigate(); // Added navigate
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
-    if (isLoggedIn && location.pathname === '/home') {
-      setIsDropdownOpen(!isDropdownOpen);
-    }
+    setIsDropdownOpen((prev) => !prev);
   };
 
+  // Close dropdown on outside click
   useEffect(() => {
-    console.log('isLoggedIn:', isLoggedIn, 'Location:', location.pathname);
-  }, [isLoggedIn, location.pathname]);
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
 
-  // Function to check if screen is small and close menu on link click
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+  // Log debug info on render
+  useEffect(() => {
+    console.log('Render - isLoggedIn:', isLoggedIn, 'Location:', location.pathname, 'menuOpen:', menuOpen, 'isDropdownOpen:', isDropdownOpen);
+  }, [isLoggedIn, location.pathname, menuOpen, isDropdownOpen]);
+
   const handleLinkClick = () => {
     if (window.innerWidth <= 768) {
       setMenuOpen(false);
@@ -34,9 +51,11 @@ const Navigation_list = () => {
       <div className="exclusive_text">
         <p>Exclusive</p>
       </div>
+
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
+
       <div className={`navigation ${menuOpen ? 'show' : ''}`}>
         <nav className="navigation-lists">
           <Link to="/" className="navigation-page" onClick={handleLinkClick}>Home</Link>
@@ -45,6 +64,7 @@ const Navigation_list = () => {
           <Link to="/signup" className="navigation-page" onClick={handleLinkClick}>Sign Up</Link>
         </nav>
       </div>
+
       <div className="input_type">
         <div className="input-type-main">
           <input
@@ -54,27 +74,31 @@ const Navigation_list = () => {
           />
           <SearchIcon />
         </div>
+
         <div className="icons">
           <FiHeart className="heart-icon" size={22} />
-          <ShoppingCart className="shopping-cart" size={22} />
-          {isLoggedIn && location.pathname === '/home' && (
-            <div className="user-icon-wrapper" style={{ position: 'relative' }}>
+          <ShoppingCart
+            className="shopping-cart"
+            size={22}
+            onClick={() => navigate('/cart')} // Navigate to cart on click
+          />
+          {isLoggedIn && (
+            <div className="user-icon-wrapper" ref={dropdownRef}>
               <User
                 className="user"
                 size={22}
                 onClick={toggleDropdown}
-                style={{ cursor: 'pointer' }}
               />
               {isDropdownOpen && (
                 <ul className="user-dropdown">
                   <li>
-                    <Link to="/my-order" onClick={() => setIsDropdownOpen(false)}>My Order</Link>
+                    <Link to="/my-order" onClick={() => setIsDropdownOpen(true)}>My Order</Link>
                   </li>
                   <li>
-                    <Link to="/my-cancellation" onClick={() => setIsDropdownOpen(false)}>My Cancellation</Link>
+                    <Link to="/my-cancellation" onClick={() => setIsDropdownOpen(true)}>My Cancellation</Link>
                   </li>
                   <li>
-                    <span onClick={() => { logout(); setIsDropdownOpen(false); }}>Logout</span>
+                    <span onClick={() => { logout(); setIsDropdownOpen(true); }}>Logout</span>
                   </li>
                 </ul>
               )}
