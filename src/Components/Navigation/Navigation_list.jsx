@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
-import { SearchIcon, ShoppingCart, User, Menu, X } from 'lucide-react';
+import { SearchIcon, ShoppingCart, User, Menu, X, Star, LogOut } from 'lucide-react';
 import { FiHeart } from 'react-icons/fi';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux'; // Added useSelector
+import { useSelector } from 'react-redux';
 import './Navigation.css';
 import { AuthContext } from '../../util/AuthContext.jsx';
+import { HiOutlineShoppingBag } from 'react-icons/hi';
 
 const Navigation_list = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,6 @@ const Navigation_list = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
-  // Get cart items from Redux store and calculate total items
   const cartItems = useSelector((state) => state.cart.items);
   const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -49,6 +49,9 @@ const Navigation_list = () => {
     }
   };
 
+  // Hide icons and dropdown on /signup and /login pages
+  const isSignupOrLogin = location.pathname === '/signup' || location.pathname === '/login';
+
   return (
     <div className="navigation-container">
       <div className="exclusive_text">
@@ -78,59 +81,57 @@ const Navigation_list = () => {
           <SearchIcon />
         </div>
 
-        <div className="icons">
-          <FiHeart className="heart-icon" size={22} />
-          <div className="cart-icon-wrapper" style={{ position: 'relative' }}>
-            <ShoppingCart
-              className="shopping-cart"
-              size={22}
-              onClick={() => navigate('/cart')}
-            />
-            {cartItemCount > 0 && (
-              <span
-                style={{
-                  position: 'absolute',
-                  top: '-8px',
-                  right: '-8px',
-                  backgroundColor: '#DB4444',
-                  color: 'white',
-                  borderRadius: '50%',
-                  width: '18px',
-                  height: '18px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                }}
-              >
-                {cartItemCount}
-              </span>
-            )}
-          </div>
-          {isLoggedIn && (
+        {!isSignupOrLogin && (
+          <div className="icons">
+            <FiHeart className="heart-icon" size={22} />
+            <div className="cart-icon-wrapper">
+              <ShoppingCart
+                className="shopping-cart"
+                size={22}
+                onClick={() => navigate('/cart')}
+              />
+              {cartItemCount > 0 && (
+                <span className="cart-counter">{cartItemCount}</span>
+              )}
+            </div>
             <div className="user-icon-wrapper" ref={dropdownRef}>
               <User
                 className="user"
                 size={22}
                 onClick={toggleDropdown}
               />
-              {isDropdownOpen && (
-                <ul className="user-dropdown">
-                  <li>
-                    <Link to="/my-order" onClick={() => setIsDropdownOpen(true)}>My Order</Link>
+              {isLoggedIn && isDropdownOpen && (
+                <ul className="user-dropdown" role="menu">
+                  <li className="menuitem">
+                    <Link to="/my-account" onClick={() => setIsDropdownOpen(false)}>
+                      <div className='menu-icon'><User size={32} className='menu-icon'/><p>Manage My Account</p></div>
+                    </Link>
                   </li>
-                  <li>
-                    <Link to="/my-cancellation" onClick={() => setIsDropdownOpen(true)}>My Cancellation</Link>
+                  <li className="menuitem">
+                    <Link to="/my-order" onClick={() => setIsDropdownOpen(false)}>
+                      <div className='menu-icon'><HiOutlineShoppingBag size={32} className='menu-icon'/><p>My Order</p></div>
+                    </Link>
                   </li>
-                  <li>
-                    <span onClick={() => { logout(); setIsDropdownOpen(true); }}>Logout</span>
+                  <li className="menuitem">
+                    <Link to="/my-cancellation" onClick={() => setIsDropdownOpen(false)}>
+                      <div className='menu-icon'><X size={32} /><p>My Cancellation</p></div>
+                    </Link>
+                  </li>
+                  <li className="menuitem">
+                    <Link to="/my-Reviews" onClick={() => setIsDropdownOpen(false)}>
+                      <div className='menu-icon'><Star size={32} className='menu-icon'/><p>My Reviews</p></div>
+                    </Link>
+                  </li>
+                  <li className="menuitem">
+                    <span onClick={() => { logout(); setIsDropdownOpen(false); navigate('/login'); }}>
+                      <div className='menu-icon'><LogOut size={32} className='menu-icon'/><p>Logout</p></div>
+                    </span>
                   </li>
                 </ul>
               )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

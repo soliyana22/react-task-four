@@ -88,29 +88,30 @@
 .heart-icon:hover,
 .shopping-cart:hover,
 .user:hover {
-  color: #007bff;
+  color: white;
 }
 
 .user-icon-wrapper {
-  position: relative;
+  /* position: relative; */
   z-index: 1001; /* Ensure it stays above other elements */
 }
 
 .user-dropdown {
-  position: absolute;
+  /* position: absolute; */
   top: 100%;
   right: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 20px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: #fff;
-  min-width: 150px;
+  min-width: 200px;
+  
+ 
 }
 
 .user-dropdown a,
@@ -127,10 +128,27 @@
   align-items: center;
   width: 100%;
 }
+.menuitem{
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.menu-icon{
+  display: flex;
+  justify-content: space-between;
+}
 
 .user-dropdown a:hover,
 .user-dropdown span:hover {
-  color: #007bff;
+  
+}
+.user-icon-wrapper:hover{
+  
+}
+.user:hover{
+  background-color: #DB4444;
+  border-radius: 50%;
+  
 }
 .user-dropdown {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -143,7 +161,68 @@
   transform: translateY(-10px);
   pointer-events: none;
 }
+.user-icon-wrapper {
+  position: relative;
+  z-index: 1001; /* Ensure wrapper is above most elements */
+}
 
+.user-dropdown {
+  position: fixed; /* Use fixed to overlay on all pages */
+  top: 80px; /* Adjust based on navigation bar height */
+  right: 10px; /* Align with right edge, adjust as needed */
+ background-color: rgba(201, 158, 207);
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1002; /* Ensure dropdown is above all other elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  min-width: 150px;
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+
+.user-dropdown li {
+  list-style: none;
+}
+
+.user-dropdown a,
+.user-dropdown span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.user-dropdown a:hover,
+.user-dropdown span:hover {
+  background-color: rgba(173, 159, 159, 0.42);
+  border-radius: 4px;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.cart-counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #DB4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .navigation-container {

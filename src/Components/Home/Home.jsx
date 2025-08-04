@@ -181,8 +181,10 @@ const Home = () => {
               <div className='sale-product-image'>
                 <img src="./../assets/images/GamePad.png" className='product-image' />
               </div>
+              
               <div className='add-cart' onClick={() => handleAddToCart({ name: 'HAVIT HV-G92 Gamepad', image: './../assets/images/GamePad.png', currentPrice: 120 })}>
                 <div className='add-to-cart-text'><ShoppingCart /><p >Add to Cart</p></div></div>
+             
             </div>
             <div className='sale-product-lower'>
               <p className='product-name'>HAVIT HV-G92 Gamepad</p>
@@ -721,7 +723,7 @@ const Home = () => {
           <div className="sale-product">
             <div className="sale-product-main">
               <div className="sale-product-btn">
-                <div className='dis-btn-main'></div>
+                <div className='dis-btn-main new'></div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
                     <FaRegHeart className="icon-outline" />
@@ -783,7 +785,7 @@ const Home = () => {
           <div className="sale-product">
             <div className="sale-product-main">
               <div className="sale-product-btn">
-                <div className='dis-btn-main'></div>
+                <div className='dis-btn-main new'></div>
                 <div className="sale-product-icon">
                   <div className="icon-circle">
                     <FaRegHeart className="icon-outline" />
