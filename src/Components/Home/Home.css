@@ -1446,6 +1446,30 @@
         height: 16px;
     }
 }
+@media (max-width: 768px) {
+  .home-lists {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .voucher {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .today-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .today-product-container {
+    width: 90%;
+  }
+
+  .section-arrows {
+    flex-direction: column;
+  }
+}
 
 /* Mobile media query (up to 480px) */
 @media (max-width: 480px) {

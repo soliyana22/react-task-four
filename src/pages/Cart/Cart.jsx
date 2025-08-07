@@ -13,7 +13,7 @@ export const Cart = () => {
   return (
     <div className='cart-container'>
       <div className='cart-link'>
-        <div className='Inactive'>Home<span>/</span></div>
+        <div className='Inactive' onClick={() => navigate("/home")}>Home<span>/</span></div>
         <div className='active'>Cart<span>/</span></div>
       </div>
       <div className='rows'>
